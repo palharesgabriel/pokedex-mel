@@ -22,7 +22,13 @@ class PokemonLinsViewController: UIViewController, UICollectionViewDataSource, U
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        let ViewButtonItem = UIBarButtonItem(title: "View", style: .done, target: self, action: #selector(changeController))
+        self.navigationItem.leftBarButtonItem  = ViewButtonItem
 
+    }
+    
+   @objc func changeController()  {
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
