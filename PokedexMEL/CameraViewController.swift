@@ -16,6 +16,7 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     var captureSession: AVCaptureSession!
     var stillImageOutput: AVCapturePhotoOutput!
     var videoPreviewLayer: AVCaptureVideoPreviewLayer!
+    @IBOutlet weak var pokemonName: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,6 +25,10 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     @IBAction func didTakePhoto(_ sender: Any) {
         let settings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])
         stillImageOutput.capturePhoto(with: settings, delegate: self)
+        
+    }
+    
+    @IBAction func saveButtonDidPress(_ sender: Any) {
         
     }
     
@@ -68,8 +73,7 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     func verifyPokemon(basedAt image: UIImage?) {
         guard let image = image else { return }
         let prediction = PokemonModelBase().predict(with: image)
-        //label = predi
-        
+        pokemonName.text = prediction?.0
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -93,6 +97,10 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
             }
         }
         
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
     
 }
