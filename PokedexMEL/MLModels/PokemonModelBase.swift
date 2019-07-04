@@ -9,7 +9,7 @@
 import UIKit
 
 
-class NudityBase {
+class PokemonModelBase {
     
     func predict(with image: UIImage) -> (String, Double)? {
         guard let imageResized = imageWithImage(image: image, scaledToSize: CGSize(width: 224, height: 224)),
