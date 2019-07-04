@@ -62,6 +62,14 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         
         let image = UIImage(data: imageData)
         captureImageView.image = image
+        verifyPokemon(basedAt: image)
+    }
+    
+    func verifyPokemon(basedAt image: UIImage?) {
+        guard let image = image else { return }
+        let prediction = PokemonModelBase().predict(with: image)
+        //label = predi
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {

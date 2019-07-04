@@ -69,13 +69,13 @@
 				F2773F7A22CE36E500F3584E /* Models */,
 				F2773F7722CE361100F3584E /* Services */,
 				F2773F7222CE327600F3584E /* MLModels */,
+				A40CDAE622CE32FE00CB4680 /* CameraViewController.swift */,
+				A40CDAE722CE32FE00CB4680 /* CameraViewController.xib */,
 				ABA2115422CE292C00C9FC03 /* AppDelegate.swift */,
 				ABA2115E22CE292E00C9FC03 /* Assets.xcassets */,
 				ABA2116022CE292E00C9FC03 /* LaunchScreen.storyboard */,
 				ABA2116322CE292E00C9FC03 /* Info.plist */,
 				ABA2115B22CE292C00C9FC03 /* PokedexMEL.xcdatamodeld */,
-				A40CDAE622CE32FE00CB4680 /* CameraViewController.swift */,
-				A40CDAE722CE32FE00CB4680 /* CameraViewController.xib */,
 			);
 			path = PokedexMEL;
 			sourceTree = "<group>";
@@ -179,7 +179,6 @@
 			files = (
 				F2773F7D22CE36FD00F3584E /* Pokemon.swift in Sources */,
 				F2773F7922CE362100F3584E /* Database.swift in Sources */,
-				ABA2115722CE292C00C9FC03 /* ViewController.swift in Sources */,
 				F2773F7422CE329F00F3584E /* PokemonMlModel.mlmodel in Sources */,
 				A40CDAE822CE32FE00CB4680 /* CameraViewController.swift in Sources */,
 				ABA2115522CE292C00C9FC03 /* AppDelegate.swift in Sources */,
@@ -324,7 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6Z5CB5T6U7;
+				DEVELOPMENT_TEAM = 56L5ZBLR4P;
 				INFOPLIST_FILE = PokedexMEL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -342,7 +341,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6Z5CB5T6U7;
+				DEVELOPMENT_TEAM = 56L5ZBLR4P;
 				INFOPLIST_FILE = PokedexMEL/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
