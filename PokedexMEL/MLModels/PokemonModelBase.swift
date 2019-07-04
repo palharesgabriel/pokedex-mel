@@ -12,7 +12,7 @@ import UIKit
 class NudityBase {
     
     func predict(with image: UIImage) -> (String, Double)? {
-        guard let imageResized = imageWithImage(image: image, scaledToSize: CGSize(width: 224, height: 224)),
+        guard let imageResized = imageWithImage(image: image, scaledToSize: CGSize(width: 299, height: 299)),
             let pixelBuffer = toCVPixelBuffer(image: imageResized) else { return nil }
         do {
             let pokemonModel = PokemonMlModel()
