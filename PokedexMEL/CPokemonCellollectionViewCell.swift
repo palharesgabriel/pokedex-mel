@@ -14,7 +14,7 @@ class CPokemonCellollectionViewCell: UICollectionViewCell {
     let pokemonImage: UIImageView = {
         let pokemon = UIImageView()
         pokemon.contentMode = .scaleToFill
-        pokemon.backgroundColor = #colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1)
+        pokemon.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.4784313738, blue: 0.6431372762, alpha: 1)
         pokemon.translatesAutoresizingMaskIntoConstraints = false
         pokemon.layer.cornerRadius = 16
         pokemon.clipsToBounds = true
@@ -38,6 +38,7 @@ class CPokemonCellollectionViewCell: UICollectionViewCell {
     
     override init (frame: CGRect) {
         super.init(frame: frame)
+        setup()
         
     }
     

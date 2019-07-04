@@ -35,17 +35,22 @@ class PokemonLinsViewController: UIViewController, UICollectionViewDataSource, U
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return .init(top: 10, left: 25, bottom: 10, right: 25)
+    }
+
+    
     func setup()  {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.itemSize = CGSize(width: view.frame.width, height: view.frame.height)
         
-        collectionview = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+        collectionview = UICollectionView(frame: self.view.frame, collectionViewLayout: cellSize)
         collectionview.delegate = self
         collectionview.dataSource = self
         collectionview.register(CPokemonCellollectionViewCell.self, forCellWithReuseIdentifier: cellId)
         collectionview.showsVerticalScrollIndicator = false
-        collectionview.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        collectionview.backgroundColor = #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
         collectionview.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(collectionview)
         
@@ -57,9 +62,6 @@ class PokemonLinsViewController: UIViewController, UICollectionViewDataSource, U
         
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return .init(top: 10, left: 10, bottom: 10, right: 10)
-    }
     
     
     
