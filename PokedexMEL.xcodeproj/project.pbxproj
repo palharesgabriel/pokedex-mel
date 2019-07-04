@@ -152,7 +152,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABA2115722CE292C00C9FC03 /* ViewController.swift in Sources */,
 				F2773F7422CE329F00F3584E /* PokemonMlModel.mlmodel in Sources */,
 				A40CDAE822CE32FE00CB4680 /* CameraViewController.swift in Sources */,
 				ABA2115522CE292C00C9FC03 /* AppDelegate.swift in Sources */,

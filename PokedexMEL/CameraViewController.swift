@@ -87,4 +87,8 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
         
     }
     
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    
 }
