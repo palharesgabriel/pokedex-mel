@@ -10,6 +10,11 @@ import UIKit
 
 class PokemonLinsViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    var favoritesPokemon: [Pokemon] = [] {
+        didSet {
+            collectionview.reloadData()
+        }
+    }
     var collectionview: UICollectionView!
     var cellId = "Cell"
     
@@ -21,16 +26,26 @@ class PokemonLinsViewController: UIViewController, UICollectionViewDataSource, U
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(navigate))
+        swipeGesture.direction = .right
+        view.addGestureRecognizer(swipeGesture)
         setup()
-
+        favoritesPokemon = Database.core.favoritesPokemon
+    }
+    
+    @objc func navigate() {
+        navigationController?.popViewController(animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 180
+        return favoritesPokemon.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CPokemonCellollectionViewCell
+        
+        let pokemon = favoritesPokemon[indexPath.row]
+        cell.pokemon = pokemon
         
         return cell
     }
@@ -61,8 +76,9 @@ class PokemonLinsViewController: UIViewController, UICollectionViewDataSource, U
         return .init(top: 10, left: 10, bottom: 10, right: 10)
     }
     
-    
-    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return .init(width: 100, height: 100)
+    }
 
 
 }

@@ -15,10 +15,10 @@
 		ABA2115D22CE292C00C9FC03 /* PokedexMEL.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = ABA2115B22CE292C00C9FC03 /* PokedexMEL.xcdatamodeld */; };
 		ABA2115F22CE292E00C9FC03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABA2115E22CE292E00C9FC03 /* Assets.xcassets */; };
 		ABA2116222CE292E00C9FC03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABA2116022CE292E00C9FC03 /* LaunchScreen.storyboard */; };
+		F22D297422CE6B1900EA79E6 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2773F7C22CE36FD00F3584E /* Pokemon.swift */; };
+		F22D297522CE6B2100EA79E6 /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2773F7822CE362100F3584E /* Database.swift */; };
 		F2773F7422CE329F00F3584E /* PokemonMlModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F2773F7322CE329F00F3584E /* PokemonMlModel.mlmodel */; };
 		F2773F7622CE32EE00F3584E /* PokemonModelBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2773F7522CE32EE00F3584E /* PokemonModelBase.swift */; };
-		F2773F7922CE362100F3584E /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2773F7822CE362100F3584E /* Database.swift */; };
-		F2773F7D22CE36FD00F3584E /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2773F7C22CE36FD00F3584E /* Pokemon.swift */; };
 		F2773F7F22CE3A1300F3584E /* FileManagerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2773F7E22CE3A1300F3584E /* FileManagerHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -74,16 +74,14 @@
 				F2773F7722CE361100F3584E /* Services */,
 				F2773F7222CE327600F3584E /* MLModels */,
 				A40CDAE622CE32FE00CB4680 /* CameraViewController.swift */,
+				AB2859C922CE4118002B0012 /* PokemonLinsViewController.swift */,
+				AB2859CB22CE413C002B0012 /* CPokemonCellollectionViewCell.swift */,
 				A40CDAE722CE32FE00CB4680 /* CameraViewController.xib */,
 				ABA2115422CE292C00C9FC03 /* AppDelegate.swift */,
 				ABA2115E22CE292E00C9FC03 /* Assets.xcassets */,
 				ABA2116022CE292E00C9FC03 /* LaunchScreen.storyboard */,
 				ABA2116322CE292E00C9FC03 /* Info.plist */,
 				ABA2115B22CE292C00C9FC03 /* PokedexMEL.xcdatamodeld */,
-				A40CDAE622CE32FE00CB4680 /* CameraViewController.swift */,
-				AB2859C922CE4118002B0012 /* PokemonLinsViewController.swift */,
-				AB2859CB22CE413C002B0012 /* CPokemonCellollectionViewCell.swift */,
-				A40CDAE722CE32FE00CB4680 /* CameraViewController.xib */,
 			);
 			path = PokedexMEL;
 			sourceTree = "<group>";
@@ -190,8 +188,10 @@
 				AB2859CA22CE4118002B0012 /* PokemonLinsViewController.swift in Sources */,
 				ABA2115522CE292C00C9FC03 /* AppDelegate.swift in Sources */,
 				F2773F7622CE32EE00F3584E /* PokemonModelBase.swift in Sources */,
+				F22D297422CE6B1900EA79E6 /* Pokemon.swift in Sources */,
 				AB2859CC22CE413C002B0012 /* CPokemonCellollectionViewCell.swift in Sources */,
 				ABA2115D22CE292C00C9FC03 /* PokedexMEL.xcdatamodeld in Sources */,
+				F22D297522CE6B2100EA79E6 /* Database.swift in Sources */,
 				F2773F7F22CE3A1300F3584E /* FileManagerHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,7 +19,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
-        window?.rootViewController = CameraViewController()
+        let navCtrl = UINavigationController(rootViewController: CameraViewController())
+        navCtrl.isNavigationBarHidden = true
+        
+        window?.rootViewController = navCtrl
         self.window?.makeKeyAndVisible()
         return true
     }

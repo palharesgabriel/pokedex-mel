@@ -20,6 +20,9 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(navigate))
+        swipeGesture.direction = .left
+        view.addGestureRecognizer(swipeGesture)
     }
     
     @IBAction func didTakePhoto(_ sender: Any) {
@@ -29,7 +32,18 @@ class CameraViewController: UIViewController, AVCapturePhotoCaptureDelegate {
     }
     
     @IBAction func saveButtonDidPress(_ sender: Any) {
-        
+        if let name = pokemonName.text, let image = captureImageView.image, name != "POKEMON NAME" {
+            do {
+                try Database.core.add(pokemon: Pokemon(name: name, image: image))
+            } catch let e {
+                print(e)
+            }
+        }
+    }
+    
+    @objc func navigate() {
+        let ctrl = PokemonLinsViewController()
+        self.navigationController?.pushViewController(ctrl, animated: true)
     }
     
     override func viewDidAppear(_ animated: Bool) {

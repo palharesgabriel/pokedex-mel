@@ -41,6 +41,16 @@ class Database {
         let favoritePokemon = FavoritePoke(context: context)
         favoritePokemon.name = pokemon.name
         favoritePokemon.image_path = imagePath
+        
+        if mainContext?.hasChanges == false {
+            throw DatabaseError.contextNotFound
+        }
+        
+        do {
+            try mainContext?.save()
+        } catch _ {
+            throw DatabaseError.errorInSaveImageOperation
+        }
     }
     
     private func saveImage(_ image: UIImage, withName imageName: String) -> String? {
